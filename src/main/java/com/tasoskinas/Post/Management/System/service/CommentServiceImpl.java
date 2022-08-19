@@ -56,7 +56,6 @@ public class CommentServiceImpl implements CommentService {
 
         commentRepository.save(theComment);
     }
-
     @Override
     public void deleteById(int theId) {
         commentRepository.deleteById(theId);

@@ -28,7 +28,7 @@ public class Comment {
     @Column(name = "id")
     private int id;
 
-    //allilouxia toy xristi me post comment
+    //allilouxia tou user me post comment
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "user_id")
     @JsonBackReference(value = "user-comments")
@@ -37,6 +37,7 @@ public class Comment {
     @Column(name = "text")
     private String text;
 
+    //Many-to-One Relationship
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "post_id")
     @JsonBackReference
